@@ -17,7 +17,6 @@ server.get("/dsTivi/:id",(req,res)=>{
     db.getOne("tivi",filter).then(result=>{
         res.json(result)
     })
-    
 })
 
 server.get("/dsDienthoai",(req,res)=>{
