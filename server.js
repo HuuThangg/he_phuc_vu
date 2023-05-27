@@ -145,12 +145,12 @@ server.post("/updateTivi",(req,res)=>{
         let filter={
             "Ma_so": tivi.Ma_so
         }
-        let userUpdate={
+        let TiviUpdate={
             "$set":{
                 "Don_gia_Ban":tivi.Don_gia_Ban 
             }
         }
-        db.updateOne("user",filter,userUpdate).then(result=>{
+        db.updateOne("tivi",filter,TiviUpdate).then(result=>{
             console.log(result);
             res.json(ket_qua);
         }).catch(err=>{
